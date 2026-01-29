@@ -7,8 +7,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
-        <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+      <header className="bg-white/95 backdrop-blur-sm shadow-md fixed top-0 left-0 right-0 z-50">
+        <div className="container mx-auto px-4 py-3 sm:py-4 flex items-center justify-between">
           <div className="flex items-center">
             <img
               src="/image0.jpeg"
@@ -18,7 +18,7 @@ export default function Header() {
           </div>
           <a
             href="tel:9045557821"
-            className="hidden sm:flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-md"
+            className="hidden sm:flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl"
           >
             <Phone size={20} />
             (904) 555-7821
@@ -26,18 +26,18 @@ export default function Header() {
         </div>
       </header>
 
-      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-gray-200 shadow-2xl">
-        <div className="grid grid-cols-2 gap-0">
+      <div className="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-gray-200 shadow-2xl safe-area-bottom">
+        <div className="grid grid-cols-2">
           <a
             href="tel:9045557821"
-            className="flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-4 font-bold hover:bg-blue-700 transition"
+            className="flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-4 font-bold text-base hover:bg-blue-700 transition-all active:bg-blue-800"
           >
             <Phone size={20} />
             Call
           </a>
           <button
             onClick={scrollToContact}
-            className="flex items-center justify-center gap-2 bg-cyan-600 text-white px-4 py-4 font-bold hover:bg-cyan-700 transition"
+            className="flex items-center justify-center gap-2 bg-cyan-600 text-white px-4 py-4 font-bold text-base hover:bg-cyan-700 transition-all active:bg-cyan-800"
           >
             <FileText size={20} />
             Get Estimate

@@ -39,11 +39,11 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="contact" className="py-20 sm:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-10 sm:mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-12 sm:mb-14">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-5">
               Get Your Free Estimate
             </h2>
             <p className="text-lg sm:text-xl text-gray-600">
@@ -52,17 +52,17 @@ export default function ContactForm() {
           </div>
 
           {isSuccess && (
-            <div className="mb-6 bg-green-50 border-2 border-green-500 rounded-lg p-4 flex items-center gap-3 text-green-800">
-              <CheckCircle size={24} />
+            <div className="mb-6 bg-green-50 border-2 border-green-500 rounded-xl p-5 flex items-center gap-3 text-green-800 animate-fade-in">
+              <CheckCircle size={24} className="flex-shrink-0" />
               <p className="font-semibold">
                 Opening your email client now. Thank you for your interest!
               </p>
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
-            <div className="mb-5 sm:mb-6">
-              <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
+          <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-2xl p-6 sm:p-10">
+            <div className="mb-6">
+              <label htmlFor="name" className="block text-gray-700 font-semibold mb-2 text-lg">
                 Name *
               </label>
               <input
@@ -72,12 +72,13 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-600 focus:outline-none transition"
+                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-600 focus:outline-none transition text-lg"
+                placeholder="Your name"
               />
             </div>
 
-            <div className="mb-5 sm:mb-6">
-              <label htmlFor="phone" className="block text-gray-700 font-semibold mb-2">
+            <div className="mb-6">
+              <label htmlFor="phone" className="block text-gray-700 font-semibold mb-2 text-lg">
                 Phone *
               </label>
               <input
@@ -87,12 +88,13 @@ export default function ContactForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-600 focus:outline-none transition"
+                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-600 focus:outline-none transition text-lg"
+                placeholder="(904) 555-1234"
               />
             </div>
 
-            <div className="mb-5 sm:mb-6">
-              <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
+            <div className="mb-6">
+              <label htmlFor="email" className="block text-gray-700 font-semibold mb-2 text-lg">
                 Email *
               </label>
               <input
@@ -102,12 +104,13 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-600 focus:outline-none transition"
+                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-600 focus:outline-none transition text-lg"
+                placeholder="your@email.com"
               />
             </div>
 
-            <div className="mb-6 sm:mb-8">
-              <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
+            <div className="mb-8">
+              <label htmlFor="message" className="block text-gray-700 font-semibold mb-2 text-lg">
                 Message *
               </label>
               <textarea
@@ -117,20 +120,20 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-600 focus:outline-none transition resize-none"
+                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-600 focus:outline-none transition resize-none text-lg"
                 placeholder="Tell us about your property and what services you're interested in..."
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-2"
+              className="w-full bg-blue-600 text-white px-8 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-0.5 flex items-center justify-center gap-2"
             >
-              <Send size={20} />
+              <Send size={22} />
               Get Free Estimate
             </button>
 
-            <p className="text-center text-sm text-gray-500 mt-4">
+            <p className="text-center text-base text-gray-500 mt-5">
               Or call us directly at <a href="tel:9045557821" className="text-blue-600 font-semibold hover:underline">(904) 555-7821</a>
             </p>
           </form>
