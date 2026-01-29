@@ -10,6 +10,13 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/20"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="flex justify-center mb-8">
+            <img
+              src="/image0.jpeg"
+              alt="Duval Property Services"
+              className="h-24 w-auto sm:h-32 md:h-40 max-w-full object-contain"
+            />
+          </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
             Reliable Lawn Care & Pressure Washing in Jacksonville
           </h1>

@@ -9,7 +9,7 @@ const services = [
   {
     icon: Droplets,
     title: 'Pressure Washing',
-    description: 'High-powered cleaning for driveways, sidewalks, decks, and exterior surfaces. Remove dirt, grime, and stains effectively.',
+    description: 'High-powered cleaning for driveways, sidewalks, decks, and exterior surfaces. Includes paver restoration to bring back the original beauty of your pavers. Remove dirt, grime, and stains effectively.',
   },
   {
     icon: Sparkles,
