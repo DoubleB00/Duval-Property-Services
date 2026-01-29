@@ -1,11 +1,6 @@
 import { useState } from 'react';
-import { createClient } from '@supabase/supabase-js';
-import { Send, CheckCircle } from 'lucide-react';
-
-const supabase = createClient(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_ANON_KEY
-);
+import { Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { supabase, isSupabaseConfigured } from '../lib/supabaseClient';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -23,12 +18,18 @@ export default function ContactForm() {
     setIsSubmitting(true);
     setError('');
 
+    if (!supabase) {
+      setError('Database connection not configured. Please call us directly at (123) 456-7890.');
+      setIsSubmitting(false);
+      return;
+    }
+
     const { error: submitError } = await supabase
       .from('contact_submissions')
       .insert([formData]);
 
     if (submitError) {
-      setError('Failed to submit form. Please call us directly.');
+      setError('Failed to submit form. Please call us directly at (123) 456-7890.');
       setIsSubmitting(false);
       return;
     }
@@ -61,6 +62,16 @@ export default function ContactForm() {
               Fill out the form below and we'll get back to you shortly
             </p>
           </div>
+
+          {!isSupabaseConfigured && (
+            <div className="mb-6 bg-yellow-50 border-2 border-yellow-500 rounded-lg p-4 flex items-center gap-3 text-yellow-800">
+              <AlertCircle size={24} />
+              <div>
+                <p className="font-semibold">Form submission temporarily unavailable</p>
+                <p className="text-sm mt-1">Please call us directly at (123) 456-7890</p>
+              </div>
+            </div>
+          )}
 
           {isSuccess && (
             <div className="mb-6 bg-green-50 border-2 border-green-500 rounded-lg p-4 flex items-center gap-3 text-green-800">
