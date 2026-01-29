@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Send, CheckCircle, AlertCircle } from 'lucide-react';
-import { supabase, isSupabaseConfigured } from '../lib/supabaseClient';
+import { Send, CheckCircle } from 'lucide-react';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -9,33 +8,22 @@ export default function ContactForm() {
     email: '',
     message: '',
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [error, setError] = useState('');
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    setError('');
 
-    if (!supabase) {
-      setError('Database connection not configured. Please call us directly at (123) 456-7890.');
-      setIsSubmitting(false);
-      return;
-    }
+    const subject = encodeURIComponent('Free Estimate Request from Website');
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Phone: ${formData.phone}\n` +
+      `Email: ${formData.email}\n\n` +
+      `Message:\n${formData.message}`
+    );
 
-    const { error: submitError } = await supabase
-      .from('contact_submissions')
-      .insert([formData]);
-
-    if (submitError) {
-      setError('Failed to submit form. Please call us directly at (123) 456-7890.');
-      setIsSubmitting(false);
-      return;
-    }
+    window.location.href = `mailto:info@duvalpropertyservices.com?subject=${subject}&body=${body}`;
 
     setIsSuccess(true);
-    setIsSubmitting(false);
     setFormData({ name: '', phone: '', email: '', message: '' });
 
     setTimeout(() => setIsSuccess(false), 5000);
@@ -51,45 +39,29 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section id="contact" className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Get Your Free Estimate
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg sm:text-xl text-gray-600">
               Fill out the form below and we'll get back to you shortly
             </p>
           </div>
-
-          {!isSupabaseConfigured && (
-            <div className="mb-6 bg-yellow-50 border-2 border-yellow-500 rounded-lg p-4 flex items-center gap-3 text-yellow-800">
-              <AlertCircle size={24} />
-              <div>
-                <p className="font-semibold">Form submission temporarily unavailable</p>
-                <p className="text-sm mt-1">Please call us directly at (123) 456-7890</p>
-              </div>
-            </div>
-          )}
 
           {isSuccess && (
             <div className="mb-6 bg-green-50 border-2 border-green-500 rounded-lg p-4 flex items-center gap-3 text-green-800">
               <CheckCircle size={24} />
               <p className="font-semibold">
-                Thank you! We'll contact you soon with your free estimate.
+                Opening your email client now. Thank you for your interest!
               </p>
             </div>
           )}
 
-          {error && (
-            <div className="mb-6 bg-red-50 border-2 border-red-500 rounded-lg p-4 text-red-800">
-              <p className="font-semibold">{error}</p>
-            </div>
-          )}
-
-          <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-8">
-            <div className="mb-6">
+          <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-lg p-6 sm:p-8">
+            <div className="mb-5 sm:mb-6">
               <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
                 Name *
               </label>
@@ -100,11 +72,11 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-600 focus:outline-none transition"
               />
             </div>
 
-            <div className="mb-6">
+            <div className="mb-5 sm:mb-6">
               <label htmlFor="phone" className="block text-gray-700 font-semibold mb-2">
                 Phone *
               </label>
@@ -115,11 +87,11 @@ export default function ContactForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-600 focus:outline-none transition"
               />
             </div>
 
-            <div className="mb-6">
+            <div className="mb-5 sm:mb-6">
               <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
                 Email *
               </label>
@@ -130,11 +102,11 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-600 focus:outline-none transition"
               />
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 sm:mb-8">
               <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
                 Message *
               </label>
@@ -145,25 +117,22 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-600 focus:outline-none transition resize-none"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-600 focus:outline-none transition resize-none"
                 placeholder="Tell us about your property and what services you're interested in..."
               ></textarea>
             </div>
 
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="w-full bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:scale-105 flex items-center justify-center gap-2"
             >
-              {isSubmitting ? (
-                'Submitting...'
-              ) : (
-                <>
-                  <Send size={20} />
-                  Get Free Estimate
-                </>
-              )}
+              <Send size={20} />
+              Get Free Estimate
             </button>
+
+            <p className="text-center text-sm text-gray-500 mt-4">
+              Or call us directly at <a href="tel:9045557821" className="text-blue-600 font-semibold hover:underline">(904) 555-7821</a>
+            </p>
           </form>
         </div>
       </div>
