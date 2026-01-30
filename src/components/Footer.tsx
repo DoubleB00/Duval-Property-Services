@@ -41,7 +41,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Service Area</h3>
             <p className="text-gray-400 leading-relaxed text-base">
-              Jacksonville, Duval County, Atlantic Beach, Neptune Beach, Jacksonville Beach, Ponte Vedra Beach, Orange Park, and surrounding areas
+              Jacksonville, Atlantic Beach, Neptune Beach, Jacksonville Beach, Ponte Vedra Beach, Orange Park, and surrounding areas
             </p>
           </div>
         </div>

@@ -2,7 +2,6 @@ import { MapPin } from 'lucide-react';
 
 const areas = [
   'Jacksonville',
-  'Duval County',
   'Atlantic Beach',
   'Neptune Beach',
   'Jacksonville Beach',
@@ -25,7 +24,7 @@ export default function ServiceArea() {
             Service Area
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 mb-12 sm:mb-14">
-            Proudly serving Jacksonville and the greater Duval County area
+            Proudly serving Jacksonville and surrounding areas
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-5">
             {areas.map((area) => (
