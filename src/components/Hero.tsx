@@ -23,9 +23,13 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-5 sm:mb-6 leading-tight text-gray-900 tracking-tight">
             Lawn Care, Pressure Washing & Softwash
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl mb-10 sm:mb-12 text-gray-700 font-semibold">
-            Residential & Commercial • Free Estimates • Jacksonville
-          </p>
+          <div className="text-lg sm:text-xl md:text-2xl mb-10 sm:mb-12 text-gray-700 font-semibold text-center leading-snug">
+            <span className="block sm:inline">Residential & Commercial</span>
+            <span className="hidden sm:inline"> • </span>
+            <span className="block sm:inline">Free Estimates</span>
+            <span className="hidden sm:inline"> • </span>
+            <span className="block sm:inline">Jacksonville</span>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
             <a
               href="tel:9045557821"
