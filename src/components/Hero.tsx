@@ -24,7 +24,7 @@ export default function Hero() {
             Lawn Care, Pressure Washing & Softwash
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl mb-10 sm:mb-12 text-gray-700 font-semibold">
-            Residential & Commercial • Free Estimates • Jacksonville / Duval County
+            Residential & Commercial • Free Estimates • Jacksonville
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
             <a
