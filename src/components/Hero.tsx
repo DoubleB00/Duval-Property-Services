@@ -16,7 +16,7 @@ export default function Hero() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-blue-600/20 blur-2xl scale-95 opacity-60"></div>
               <img
-                src="/att.xpvixb5gxtviuiqfainsv-8emnocqu0fszybazeinqo.png.jpeg"
+                src="/d3509e69-afbd-4c43-a5da-4ea3ff29c6fd.png"
                 alt="DUVAL Property Services - Jacksonville Lawn Care & Pressure Washing"
                 className="relative w-[280px] sm:w-[400px] md:w-[520px] lg:w-[600px] max-w-full h-auto object-contain drop-shadow-2xl"
               />

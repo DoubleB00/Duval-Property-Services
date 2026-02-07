@@ -11,7 +11,7 @@ export default function Header() {
         <div className="container mx-auto px-4 py-2 sm:py-3 flex items-center justify-between">
           <a href="/" className="flex items-center">
             <img
-              src="/att.xpvixb5gxtviuiqfainsv-8emnocqu0fszybazeinqo.png.jpeg"
+              src="/d3509e69-afbd-4c43-a5da-4ea3ff29c6fd.png"
               alt="DUVAL Property Services"
               className="h-9 sm:h-11 w-auto object-contain"
             />
