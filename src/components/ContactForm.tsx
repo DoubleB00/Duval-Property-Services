@@ -72,7 +72,7 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-600 focus:outline-none transition text-lg"
+                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-[#0ea5e9] focus:outline-none transition text-lg"
                 placeholder="Your name"
               />
             </div>
@@ -88,7 +88,7 @@ export default function ContactForm() {
                 value={formData.phone}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-600 focus:outline-none transition text-lg"
+                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-[#0ea5e9] focus:outline-none transition text-lg"
                 placeholder="(904) 555-1234"
               />
             </div>
@@ -104,7 +104,7 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-600 focus:outline-none transition text-lg"
+                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-[#0ea5e9] focus:outline-none transition text-lg"
                 placeholder="your@email.com"
               />
             </div>
@@ -120,21 +120,21 @@ export default function ContactForm() {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-blue-600 focus:outline-none transition resize-none text-lg"
+                className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:border-[#0ea5e9] focus:outline-none transition resize-none text-lg"
                 placeholder="Tell us about your property and what services you're interested in..."
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white px-8 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-0.5 flex items-center justify-center gap-2"
+              className="w-full bg-[#1e3a8a] text-white px-8 py-5 rounded-xl font-bold text-lg hover:bg-[#1e40af] transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-0.5 flex items-center justify-center gap-2"
             >
               <Send size={22} />
               Get Free Estimate
             </button>
 
             <p className="text-center text-base text-gray-500 mt-5">
-              Or call us directly at <a href="tel:9045557821" className="text-blue-600 font-semibold hover:underline">(904) 555-7821</a>
+              Or call us directly at <a href="tel:9045557821" className="text-[#1e3a8a] font-semibold hover:underline">(904) 555-7821</a>
             </p>
           </form>
         </div>

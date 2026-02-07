@@ -43,9 +43,9 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group bg-white border-2 border-gray-100 rounded-2xl p-8 hover:shadow-2xl hover:border-blue-200 transition-all duration-300 hover:-translate-y-1"
+              className="group bg-white border-2 border-gray-100 rounded-2xl p-8 hover:shadow-2xl hover:border-blue-300 transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="bg-gradient-to-br from-blue-600 to-blue-700 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="bg-gradient-to-br from-[#1e3a8a] to-[#0ea5e9] w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                 <service.icon size={32} className="text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
@@ -60,7 +60,7 @@ export default function Services() {
         <div className="text-center">
           <button
             onClick={scrollToContact}
-            className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-0.5"
+            className="inline-flex items-center justify-center gap-2 bg-[#1e3a8a] text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-[#1e40af] transition-all shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-0.5"
           >
             Get a Free Estimate
           </button>
