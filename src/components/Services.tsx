@@ -5,25 +5,25 @@ const services = [
     icon: Scissors,
     title: 'Lawn Care',
     description: 'Professional mowing, edging, and trimming to keep your property looking pristine.',
-    image: 'https://images.pexels.com/photos/1453499/pexels-photo-1453499.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     icon: Droplets,
     title: 'Pressure Washing',
     description: 'High-powered cleaning for driveways, sidewalks, decks, and exterior surfaces.',
-    image: 'https://images.pexels.com/photos/5591798/pexels-photo-5591798.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/6195087/pexels-photo-6195087.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     icon: Sparkles,
     title: 'Softwash',
     description: 'Gentle yet effective cleaning for roofs, siding, and delicate painted surfaces.',
-    image: 'https://images.pexels.com/photos/6195122/pexels-photo-6195122.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/6195084/pexels-photo-6195084.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
   {
     icon: SquareStack,
     title: 'Paver Restoration',
     description: 'Restore the original beauty of your pavers with deep cleaning and sealing.',
-    image: 'https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg?auto=compress&cs=tinysrgb&w=800',
   },
 ];
 
