@@ -5,7 +5,7 @@ const services = [
     icon: Scissors,
     title: 'Lawn Care',
     description: 'Professional mowing, edging, and trimming to keep your property looking pristine.',
-    image: '/image1.jpeg',
+    image: '/att.FoAJBASdwxEWf4Nwn9uJ-1g0nW3RsN2h5WuK2TWiJME.JPG',
   },
   {
     icon: Droplets,
