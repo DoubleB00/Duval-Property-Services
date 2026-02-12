@@ -11,7 +11,7 @@ const services = [
     icon: Droplets,
     title: 'Pressure Washing',
     description: 'High-powered cleaning for driveways, sidewalks, decks, and exterior surfaces.',
-    image: 'https://images.pexels.com/photos/6195087/pexels-photo-6195087.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/C89CA44F-29CB-4B72-BA28-6BDDCB5D7229.PNG',
   },
   {
     icon: Sparkles,
