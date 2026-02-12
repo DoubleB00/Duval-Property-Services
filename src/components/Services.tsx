@@ -17,13 +17,13 @@ const services = [
     icon: Sparkles,
     title: 'Softwash',
     description: 'Gentle yet effective cleaning for roofs, siding, and delicate painted surfaces.',
-    image: 'https://images.pexels.com/photos/6195084/pexels-photo-6195084.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/att.xcwbmZQLwsRcf7naYBd3FSvcOXQ5OAPFB3Q7GgU3CvU.JPG',
   },
   {
     icon: SquareStack,
     title: 'Paver Restoration',
     description: 'Restore the original beauty of your pavers with deep cleaning and sealing.',
-    image: 'https://images.pexels.com/photos/1292241/pexels-photo-1292241.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: '/att.7YBL-d12GJmWCxcXu9XPyAZKHSYCu94fTNh6m4UHRCc.JPG',
   },
 ];
 
